@@ -37,6 +37,6 @@ remotes::install_github("arturhgq/dtools")
 ```{r}
 library(dtools)
 
-check_r_pipe(.print = FALSE)
+check_r_pipe(T)
 ```
 

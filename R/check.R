@@ -2,9 +2,9 @@
 #' @description `r lifecycle::badge('stable')`
 #'
 #'  This function checks if the running R version contains the native pipe
-#' @param .print prints the running R version
+#' @param .rversion prints the running R version
 #' @export
-check_r_pipe <- function(.print = FALSE) {
+check_r_pipe <- function(.rversion = FALSE) {
 
   R.Version()[["major"]] -> .rv.major
   as.numeric(R.Version()[["minor"]]) -> .rv_minor
@@ -20,7 +20,7 @@ check_r_pipe <- function(.print = FALSE) {
       "This R version contain the native pipe."
     )
   }
-  if (isTRUE(.print)) cli::cli_alert_info(
+  if (isTRUE(.rversion)) cli::cli_alert_info(
     "R version: {R.Version()[['major']]}.{R.Version()[['minor']]}"
   )
 }
