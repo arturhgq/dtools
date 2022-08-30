@@ -1,4 +1,4 @@
-#' @title Checks if the running R version contains the native pipe
+#' @title Check if the running R version contains the native pipe
 #' @description `r lifecycle::badge('stable')`
 #'
 #'  This function checks if the running R version contains the native pipe
