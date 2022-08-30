@@ -4,10 +4,10 @@
 \alias{check_r_pipe}
 \title{Check if the running R version contains the native pipe}
 \usage{
-check_r_pipe(.print = FALSE)
+check_r_pipe(.rversion = FALSE)
 }
 \arguments{
-\item{.print}{prints the running R version}
+\item{.rversion}{prints the running R version}
 }
 \description{
 \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#stable}{\figure{lifecycle-stable.svg}{options: alt='[Stable]'}}}{\strong{[Stable]}}
