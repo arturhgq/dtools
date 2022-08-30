@@ -1,0 +1,16 @@
+url: https://arturhgq.github.io/dtools/
+
+authors:
+  Artur Quirino:
+    href: https://arturhgq.com
+
+template:
+  bootstrap: 5
+  bslib:
+    primary: "#5c5c8a"
+    bg: "#f8f9f9"
+    fg: "#283747"
+    code-bg: "#d6dcdc"
+    border-radius: 0.5rem
+    btn-border-radius: 0.25rem
+    code_font: {google: "Fira Code"}
