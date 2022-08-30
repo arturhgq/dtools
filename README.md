@@ -31,6 +31,7 @@ remotes::install_github("arturhgq/dtools")
 ``` r
 library(dtools)
 
-check_r_pipe(.print = FALSE)
+check_r_pipe(T)
 #> ℹ This R version contain the native pipe.
+#> ℹ R version: 4.2.1
 ```
