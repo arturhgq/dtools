@@ -14,3 +14,15 @@ template:
     border-radius: 0.5rem
     btn-border-radius: 0.25rem
     code_font: {google: "Fira Code"}
+
+reference:
+- title: Update
+  desc:
+  contents:
+  - update_package
+  - update_data
+
+- title: Check
+  desc:
+  contents:
+  - check_r_pipe
