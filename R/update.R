@@ -22,7 +22,7 @@ update_package <- function(
     .unit_test = FALSE
 ) {
 
-  if (.update_data) data_update()
+  if (.update_data) update_data()
   if (.update_readme) devtools::build_readme()
   if (.update_rmd) devtools::build_rmd()
 
@@ -50,7 +50,7 @@ update_package <- function(
 update_data <- function(.path = "data-raw", .from_scratch, ...) {
 
   if (missing(.from_scratch)) {
-    fs::dir_ls(.path, glob = "*.R") %>%
+    fs::dir_ls(.path, glob = "*.R") |>
       purrr::map(source)
   }else{
     usethis::use_data(..., overwrite = TRUE)
