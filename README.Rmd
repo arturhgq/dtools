@@ -34,9 +34,16 @@ remotes::install_github("arturhgq/dtools")
 ```
 ## Examples
 
+### Check
 ```{r}
 library(dtools)
 
 check_r_pipe(T)
+```
+
+### Get
+```{r}
+get_index(mtcars, cyl)
+get_varname(mtcars, 2)
 ```
 

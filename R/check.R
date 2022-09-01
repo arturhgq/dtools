@@ -24,3 +24,18 @@ check_r_pipe <- function(.rversion = FALSE) {
     "R version: {R.Version()[['major']]}.{R.Version()[['minor']]}"
   )
 }
+
+#' @title Check if a variable exists within a data frame
+#' @description `r lifecycle::badge('stable')`
+#'
+#' This function checks if a variable exists within a data frame
+#' @param .data data frame
+#' @param .var variable on which existence will be checked
+#' @export
+#'
+check_var <- \(.data, .var){
+  deparse(
+    substitute(.var)
+  ) -> .var_string
+  any(names(.data) == .var_string)
+}

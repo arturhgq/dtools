@@ -1,2 +1,3 @@
-utils::globalVariables(".rs.restartR")
-usethis::use_package("devtools")
+utils::globalVariables(
+  c(".rs.restartR")
+)

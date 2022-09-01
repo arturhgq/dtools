@@ -16,10 +16,8 @@ RoxygenNote: 7.2.1
 Imports: 
     cli,
     devtools,
-    fs,
     lifecycle,
     pkgdown,
-    purrr,
-    usethis
+    purrr
 URL: https://github.com/arturhgq/dtools
 BugReports: https://github.com/arturhgq/dtools/issues

@@ -42,18 +42,16 @@ update_package <- function(
 #'
 #' @description `r lifecycle::badge('stable')`
 #'
-#' This function updates the raw data of a package
-#' @param ... data
-#' @param .from_scratch reads each R script inside \code{.path}
+#' This function updates the raw data of a package by reading each R script inside
+#' \code{.path}
 #' @param .path path
 #' @export
-update_data <- function(.path = "data-raw", .from_scratch, ...) {
+update_data <- function(.path = "data-raw") {
 
-  if (missing(.from_scratch)) {
-    fs::dir_ls(.path, glob = "*.R") |>
-      purrr::map(source)
-  }else{
-    usethis::use_data(..., overwrite = TRUE)
-  }
-  devtools::load_all()
+  list.dirs(.path) |>
+    list.files(
+      pattern = ".R$",
+      full.names = TRUE
+    ) |>
+    purrr::map(source)
 }

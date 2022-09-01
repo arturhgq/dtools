@@ -4,17 +4,14 @@
 \alias{update_data}
 \title{Update the raw data of a package}
 \usage{
-update_data(.path = "data-raw", .from_scratch, ...)
+update_data(.path = "data-raw")
 }
 \arguments{
 \item{.path}{path}
-
-\item{.from_scratch}{reads each R script inside \code{.path}}
-
-\item{...}{data}
 }
 \description{
 \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#stable}{\figure{lifecycle-stable.svg}{options: alt='[Stable]'}}}{\strong{[Stable]}}
 
-This function updates the raw data of a package
+This function updates the raw data of a package by reading each R script inside
+\code{.path}
 }

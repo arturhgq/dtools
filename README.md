@@ -28,10 +28,21 @@ remotes::install_github("arturhgq/dtools")
 
 ## Examples
 
+### Check
+
 ``` r
 library(dtools)
 
 check_r_pipe(T)
 #> ℹ This R version contain the native pipe.
 #> ℹ R version: 4.2.1
+```
+
+### Get
+
+``` r
+get_index(mtcars, cyl)
+#> [1] 2
+get_varname(mtcars, 2)
+#> [1] "cyl"
 ```
