@@ -25,6 +25,15 @@
     <loc>https://arturhgq.github.io/dtools/reference/dtools-package.html</loc>
   </url>
   <url>
+    <loc>https://arturhgq.github.io/dtools/reference/fill_by_group.html</loc>
+  </url>
+  <url>
+    <loc>https://arturhgq.github.io/dtools/reference/fill_merged_cells.html</loc>
+  </url>
+  <url>
+    <loc>https://arturhgq.github.io/dtools/reference/get_colnames.html</loc>
+  </url>
+  <url>
     <loc>https://arturhgq.github.io/dtools/reference/get_index.html</loc>
   </url>
   <url>
@@ -32,6 +41,9 @@
   </url>
   <url>
     <loc>https://arturhgq.github.io/dtools/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>https://arturhgq.github.io/dtools/reference/list_files.html</loc>
   </url>
   <url>
     <loc>https://arturhgq.github.io/dtools/reference/update_data.html</loc>

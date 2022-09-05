@@ -93,6 +93,33 @@
 <span><span class="co">#&gt; [1] "cyl"</span></span></code></pre></div>
 </div>
 </div>
+<div class="section level2">
+<h2 id="fill">Fill<a class="anchor" aria-label="anchor" href="#fill"></a>
+</h2>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span></span>
+<span>  a <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="cn">NA</span>,<span class="fl">2</span>,<span class="fl">3</span>,<span class="cn">NA</span><span class="op">)</span>,</span>
+<span>  b <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="cn">NA</span>,<span class="cn">NA</span>,<span class="fl">3</span>,<span class="fl">3</span><span class="op">)</span>,</span>
+<span>  c <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="cn">NA</span>,<span class="fl">1</span>,<span class="fl">3</span>,<span class="fl">3</span><span class="op">)</span>,</span>
+<span>  d <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">10</span>,<span class="cn">NA</span>, <span class="fl">2</span>,<span class="cn">NA</span><span class="op">)</span>,</span>
+<span>  group <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">2</span><span class="op">)</span></span>
+<span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="reference/fill_by_group.html">fill_by_group</a></span><span class="op">(</span><span class="va">group</span>, <span class="va">a</span>, <span class="va">d</span><span class="op">)</span></span>
+<span><span class="co">#&gt; # A tibble: 4 × 5</span></span>
+<span><span class="co">#&gt;       a     b     c     d group</span></span>
+<span><span class="co">#&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;</span></span>
+<span><span class="co">#&gt; 1     2    NA    NA    10     1</span></span>
+<span><span class="co">#&gt; 2     2    NA     1    10     1</span></span>
+<span><span class="co">#&gt; 3     3     3     3     2     2</span></span>
+<span><span class="co">#&gt; 4     3     3     3     2     2</span></span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="list">List<a class="anchor" aria-label="anchor" href="#list"></a>
+</h2>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">here</span><span class="fu">::</span><span class="fu">here</span><span class="op">(</span><span class="st">"data"</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="reference/list_files.html">list_files</a></span><span class="op">(</span><span class="st">".R"</span><span class="op">)</span></span></code></pre></div>
+</div>
 </div>
   </main><aside class="col-md-3"><div class="links">
 <h2 data-toc-skip>Links</h2>
@@ -123,6 +150,7 @@
 <ul class="list-unstyled">
 <li>
 <a href="https://arturhgq.com" class="external-link">Artur Quirino</a> <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/YOUR-ORCID-ID" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<li>Beatriz Silva da Costa <br><small class="roles"> Author, corrector </small> <a href="https://orcid.org/YOUR-ORCID-ID" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
 </ul>
 </div>
 
@@ -142,7 +170,7 @@
 
     <footer><div class="pkgdown-footer-left">
   <p></p>
-<p>Developed by <a href="https://arturhgq.com" class="external-link">Artur Quirino</a>.</p>
+<p>Developed by <a href="https://arturhgq.com" class="external-link">Artur Quirino</a>, Beatriz Silva da Costa.</p>
 </div>
 
 <div class="pkgdown-footer-right">
