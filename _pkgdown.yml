@@ -33,3 +33,15 @@ reference:
   contents:
   - get_index
   - get_varname
+  - get_colnames
+
+- title: Fill
+  desc:
+  contents:
+  - fill_by_group
+  - fill_merged_cells
+
+- title: List
+  desc:
+  contents:
+  - list_files

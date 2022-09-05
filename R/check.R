@@ -20,7 +20,7 @@ check_r_pipe <- function(.rversion = FALSE) {
       "This R version contain the native pipe."
     )
   }
-  if (isTRUE(.rversion)) cli::cli_alert_info(
+  if (.rversion) cli::cli_alert_info(
     "R version: {R.Version()[['major']]}.{R.Version()[['minor']]}"
   )
 }
@@ -33,7 +33,7 @@ check_r_pipe <- function(.rversion = FALSE) {
 #' @param .var variable on which existence will be checked
 #' @export
 #'
-check_var <- \(.data, .var){
+check_var <- function(.data, .var){
   deparse(
     substitute(.var)
   ) -> .var_string

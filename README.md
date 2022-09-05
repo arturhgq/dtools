@@ -46,3 +46,30 @@ get_index(mtcars, cyl)
 get_varname(mtcars, 2)
 #> [1] "cyl"
 ```
+
+## Fill
+
+``` r
+data.frame(
+  a = c(NA,2,3,NA),
+  b = c(NA,NA,3,3),
+  c = c(NA,1,3,3),
+  d = c(10,NA, 2,NA),
+  group = c(1,1,2,2)
+) |> 
+  fill_by_group(group, a, d)
+#> # A tibble: 4 × 5
+#>       a     b     c     d group
+#>   <dbl> <dbl> <dbl> <dbl> <dbl>
+#> 1     2    NA    NA    10     1
+#> 2     2    NA     1    10     1
+#> 3     3     3     3     2     2
+#> 4     3     3     3     2     2
+```
+
+## List
+
+``` r
+here::here("data") |> 
+  list_files(".R")
+```

@@ -17,7 +17,12 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Artur Quirino \email{first.last@example.com} (\href{https://orcid.org/YOUR-ORCID-ID}{ORCID})
+\strong{Maintainer}: Artur Quirino \email{contact@arturhgq.com} (\href{https://orcid.org/YOUR-ORCID-ID}{ORCID})
+
+Authors:
+\itemize{
+  \item Beatriz Silva da Costa \email{bs5vh@virginia.edu} (\href{https://orcid.org/YOUR-ORCID-ID}{ORCID}) [corrector]
+}
 
 }
 \keyword{internal}

@@ -2,8 +2,16 @@ Package: dtools
 Title: Tools for data analysis
 Version: 0.0.1
 Authors@R: 
-    person("Artur", "Quirino", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+    c(person(given = "Artur",
+             family = "Quirino",
+             role = c("aut", "cre"),
+             email = "contact@arturhgq.com",
+             comment = c(ORCID = "YOUR-ORCID-ID")),
+      person(given = "Beatriz",
+             family = "Silva da Costa",
+             role = c("aut", "crr"),
+             email = "bs5vh@virginia.edu",
+             comment = c(ORCID = "YOUR-ORCID-ID")))
 Description: This package provides tools for data analysis.
 License: MIT + file LICENSE
 Suggests: 
@@ -16,8 +24,13 @@ RoxygenNote: 7.2.1
 Imports: 
     cli,
     devtools,
+    dplyr,
+    glue,
     lifecycle,
     pkgdown,
-    purrr
+    purrr,
+    rlang,
+    tibble,
+    tidyr
 URL: https://github.com/arturhgq/dtools
 BugReports: https://github.com/arturhgq/dtools/issues

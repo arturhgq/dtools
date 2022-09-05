@@ -2,8 +2,12 @@
 
 export(check_r_pipe)
 export(check_var)
+export(fill_by_group)
+export(fill_merged_cells)
+export(get_colnames)
 export(get_index)
 export(get_varname)
+export(list_files)
 export(update_data)
 export(update_package)
 importFrom(lifecycle,deprecated)
