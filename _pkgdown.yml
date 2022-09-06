@@ -45,3 +45,5 @@ reference:
   desc:
   contents:
   - list_files
+  - list_select
+  - list_remove
