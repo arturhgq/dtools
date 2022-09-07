@@ -11,4 +11,5 @@ test_that("get functions", {
   expect_equal(get_index(df, var1), 1)
   expect_equal(get_varname(df, 1), "var1")
   expect_equal(get_colnames(df), df_names)
+  expect_equal(nrow(get_duplicates(df)), 0)
 })

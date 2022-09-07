@@ -28,14 +28,26 @@ get_varname <- \(.data, .index){
   colnames(.data[.index])
 }
 
-#' @title Get the name of each variable in a data frame
+#' @title Get the names of columns from a data frame
 #' @description `r lifecycle::badge('stable')`
 #'
-#' This function gests the name of each variable in a data frame
+#' This function gets the name of each variable in a data frame and stores them
+#' in a tibble
 #' @param .data data frame
 #' @export
 get_colnames <- function(.data) {
   tibble::tibble(
     names = names({{.data}})
   )
+}
+
+#' @title Get duplicate rows in a data frame
+#' @description `r lifecycle::badge('stable')`
+#'
+#' This function gets duplicate rows in a data frame
+#' @param .data data frame
+#' @export
+get_duplicates <- \(.data) {
+  .data[duplicated(.data),] |>
+  tibble::as_tibble()
 }

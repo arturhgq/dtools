@@ -71,21 +71,33 @@ remotes::install_github("arturhgq/dtools")
 
 ``` r
   here::here("R") |> 
-    list_files(".R")
+    find_files(".R")
 #> $check.R
 #> [1] "/home/arturhgq/Desktop/dtools/R/check.R"
+#> 
+#> $collapse.R
+#> [1] "/home/arturhgq/Desktop/dtools/R/collapse.R"
 #> 
 #> $`dtools-package.R`
 #> [1] "/home/arturhgq/Desktop/dtools/R/dtools-package.R"
 #> 
+#> $extract.R
+#> [1] "/home/arturhgq/Desktop/dtools/R/extract.R"
+#> 
 #> $fill.R
 #> [1] "/home/arturhgq/Desktop/dtools/R/fill.R"
+#> 
+#> $find.R
+#> [1] "/home/arturhgq/Desktop/dtools/R/find.R"
 #> 
 #> $get.R
 #> [1] "/home/arturhgq/Desktop/dtools/R/get.R"
 #> 
 #> $list.R
 #> [1] "/home/arturhgq/Desktop/dtools/R/list.R"
+#> 
+#> $make.R
+#> [1] "/home/arturhgq/Desktop/dtools/R/make.R"
 #> 
 #> $update.R
 #> [1] "/home/arturhgq/Desktop/dtools/R/update.R"

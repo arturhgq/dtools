@@ -34,6 +34,7 @@ reference:
   - get_index
   - get_varname
   - get_colnames
+  - get_duplicates
 
 - title: Fill
   desc:
@@ -44,6 +45,25 @@ reference:
 - title: List
   desc:
   contents:
-  - list_files
   - list_select
   - list_remove
+
+- title: Find
+  desc:
+  contents:
+  - find_files
+
+- title: Extract
+  desc:
+  contents:
+  - extract_numbers
+
+- title: Make
+  desc:
+  contents:
+  - make_all_character
+
+- title: Collapse
+  desc:
+  contents:
+  - collapse_duplicates

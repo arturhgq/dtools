@@ -64,7 +64,7 @@ remotes::install_github("arturhgq/dtools")
 
 ```{r}
   here::here("R") |> 
-    list_files(".R")
+    find_files(".R")
 ```
 
 ```{r}
