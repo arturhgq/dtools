@@ -22,7 +22,13 @@
     <loc>https://arturhgq.github.io/dtools/reference/check_var.html</loc>
   </url>
   <url>
+    <loc>https://arturhgq.github.io/dtools/reference/collapse_duplicates.html</loc>
+  </url>
+  <url>
     <loc>https://arturhgq.github.io/dtools/reference/dtools-package.html</loc>
+  </url>
+  <url>
+    <loc>https://arturhgq.github.io/dtools/reference/extract_numbers.html</loc>
   </url>
   <url>
     <loc>https://arturhgq.github.io/dtools/reference/fill_by_group.html</loc>
@@ -31,7 +37,13 @@
     <loc>https://arturhgq.github.io/dtools/reference/fill_merged_cells.html</loc>
   </url>
   <url>
+    <loc>https://arturhgq.github.io/dtools/reference/find_files.html</loc>
+  </url>
+  <url>
     <loc>https://arturhgq.github.io/dtools/reference/get_colnames.html</loc>
+  </url>
+  <url>
+    <loc>https://arturhgq.github.io/dtools/reference/get_duplicates.html</loc>
   </url>
   <url>
     <loc>https://arturhgq.github.io/dtools/reference/get_index.html</loc>
@@ -43,13 +55,13 @@
     <loc>https://arturhgq.github.io/dtools/reference/index.html</loc>
   </url>
   <url>
-    <loc>https://arturhgq.github.io/dtools/reference/list_files.html</loc>
-  </url>
-  <url>
     <loc>https://arturhgq.github.io/dtools/reference/list_remove.html</loc>
   </url>
   <url>
     <loc>https://arturhgq.github.io/dtools/reference/list_select.html</loc>
+  </url>
+  <url>
+    <loc>https://arturhgq.github.io/dtools/reference/make_all_character.html</loc>
   </url>
   <url>
     <loc>https://arturhgq.github.io/dtools/reference/update_data.html</loc>
