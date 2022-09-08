@@ -13,7 +13,7 @@ get_index <- function(.data, .var) {
   if (length(.index) > 0) {
     return(.index)
   } else{
-    cli::cli_abort("{.var} is nonexistent.")
+    cli::cli_abort(c("x" = "{(.var_string)} is nonexistent."))
   }
 }
 

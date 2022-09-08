@@ -9,7 +9,13 @@ check_r_pipe <- function(.rversion = FALSE) {
   R.Version()[["major"]] -> .rv.major
   as.numeric(R.Version()[["minor"]]) -> .rv_minor
 
-  if (.rv.major < 4 &  .rv_minor < 0) {
+  if (.rv.major < 4) {
+    cli::cli_abort(
+      c(
+        "This R version does not contain the native pipe.",
+        "x" = "R version must be >= 4.1")
+    )
+  } else if(.rv.major == 4 & .rv_minor < 1) {
     cli::cli_abort(
       c(
         "This R version does not contain the native pipe.",

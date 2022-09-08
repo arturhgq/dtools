@@ -9,7 +9,7 @@ extract_numbers <- \(.var) {
   if (!is.character(.var)) {
     substitute(.var) |>
       deparse()-> .var_string
-    cli::cli_abort("'{.var_string}' must be 'character'.")
+    cli::cli_abort("'{(.var_string)}' must be 'character'.")
   }
 
   gsub('[^0-9]+',"", .var) |>
