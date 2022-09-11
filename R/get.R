@@ -4,6 +4,8 @@
 #' This function returns the index of a variable
 #' @param .data data frame
 #' @param .var variable on which index will be returned
+#' @examples
+#' get_index(mtcars, cyl)
 #' @export
 get_index <- function(.data, .var) {
   deparse(
@@ -23,6 +25,8 @@ get_index <- function(.data, .var) {
 #' This function returns the name of a variable by its index
 #' @param .data data frame
 #' @param .index index of a variable
+#' @examples
+#' get_varname(mtcars, 2)
 #' @export
 get_varname <- \(.data, .index){
   colnames(.data[.index])

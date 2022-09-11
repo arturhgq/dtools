@@ -12,10 +12,22 @@ fill_by_group(.data, .group, ...)
 \item{.group}{group variable}
 
 \item{...}{variables to be filled.
-If no variables were provided, the function will fill in missing values for all variables.}
+If no variables were provided, the function will fill in missing values for
+all variables.}
 }
 \description{
 \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#stable}{\figure{lifecycle-stable.svg}{options: alt='[Stable]'}}}{\strong{[Stable]}}
 
 This function fills in missing values within groups
+}
+\examples{
+ data.frame(
+   var1 = c(NA,2,3,NA),
+   var2 = c(NA,NA,3,3),
+   var3 = c(NA,1,3,3),
+   var4 = c(10,NA, 2,NA),
+   group = c(1,1,2,2)
+ ) -> data
+
+ fill_by_group(data, group, var1, var3)
 }

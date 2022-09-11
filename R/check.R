@@ -3,6 +3,8 @@
 #'
 #'  This function checks if the running R version contains the native pipe
 #' @param .rversion prints the running R version
+#' @examples
+#' check_r_pipe(T)
 #' @export
 check_r_pipe <- function(.rversion = FALSE) {
 

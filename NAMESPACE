@@ -2,6 +2,9 @@
 
 export(check_r_pipe)
 export(check_var)
+export(clean_dirnames)
+export(clean_filenames)
+export(clean_strings)
 export(collapse_duplicates)
 export(extract_numbers)
 export(fill_by_group)

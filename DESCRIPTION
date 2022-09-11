@@ -10,8 +10,8 @@ Authors@R:
       person(given = "Beatriz",
              family = "Silva da Costa",
              role = c("aut", "crr"),
-             email = "bs5vh@virginia.edu",
-             comment = c(ORCID = "YOUR-ORCID-ID")))
+             email = "bea.s.costa@gmail.com",
+             comment = c(ORCID = "0000-0002-6345-4646")))
 Description: This package provides tools for data analysis.
 License: MIT + file LICENSE
 Suggests: 

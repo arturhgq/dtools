@@ -4,6 +4,9 @@
 #' This function finds files stored in a directory according to a naming pattern
 #' @param .path directory tree
 #' @param .ext  file extension
+#' @examples
+#' here::here("R") |>
+#'   dtools::find_files(".R")
 #' @export
 find_files <- function(.path, .ext = ".csv") {
 

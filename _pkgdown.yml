@@ -67,3 +67,10 @@ reference:
   desc:
   contents:
   - collapse_duplicates
+
+- title: Clean
+  desc:
+  contents:
+  - clean_dirnames
+  - clean_filenames
+  - clean_strings

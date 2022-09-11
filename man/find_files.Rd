@@ -16,3 +16,7 @@ find_files(.path, .ext = ".csv")
 
 This function finds files stored in a directory according to a naming pattern
 }
+\examples{
+here::here("R") |>
+  dtools::find_files(".R")
+}

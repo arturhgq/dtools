@@ -17,3 +17,16 @@ list_select(.list, ...)
 This function selects named or unnamed objects in lists. It is equivalent to
 \code{list[c("object")]} or \code{list[c(1,2)]}
 }
+\examples{
+ list(
+   obj1 = mtcars,
+   obj2 = airmiles
+ ) -> list1
+
+   list(
+   mtcars,
+   airmiles
+ ) -> list2
+list_remove(list1, "obj1")
+list_remove(list2, 1)
+}

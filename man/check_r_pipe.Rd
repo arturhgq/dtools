@@ -14,3 +14,6 @@ check_r_pipe(.rversion = FALSE)
 
 This function checks if the running R version contains the native pipe
 }
+\examples{
+check_r_pipe(T)
+}

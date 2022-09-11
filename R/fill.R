@@ -5,7 +5,18 @@
 #' @param .data data frame
 #' @param .group group variable
 #' @param ... variables to be filled.
-#' If no variables were provided, the function will fill in missing values for all variables.
+#' If no variables were provided, the function will fill in missing values for
+#' all variables.
+#' @examples
+#'  data.frame(
+#'    var1 = c(NA,2,3,NA),
+#'    var2 = c(NA,NA,3,3),
+#'    var3 = c(NA,1,3,3),
+#'    var4 = c(10,NA, 2,NA),
+#'    group = c(1,1,2,2)
+#'  ) -> data
+#'
+#'  fill_by_group(data, group, var1, var3)
 #' @export
 fill_by_group <- function(.data, .group, ...) {
 

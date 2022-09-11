@@ -21,7 +21,7 @@ Useful links:
 
 Authors:
 \itemize{
-  \item Beatriz Silva da Costa \email{bs5vh@virginia.edu} (\href{https://orcid.org/YOUR-ORCID-ID}{ORCID}) [corrector]
+  \item Beatriz Silva da Costa \email{bea.s.costa@gmail.com} (\href{https://orcid.org/0000-0002-6345-4646}{ORCID}) [corrector]
 }
 
 }

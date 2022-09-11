@@ -16,3 +16,6 @@ get_varname(.data, .index)
 
 This function returns the name of a variable by its index
 }
+\examples{
+get_varname(mtcars, 2)
+}

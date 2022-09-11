@@ -16,3 +16,6 @@ get_index(.data, .var)
 
 This function returns the index of a variable
 }
+\examples{
+get_index(mtcars, cyl)
+}
