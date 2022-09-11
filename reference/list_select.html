@@ -68,6 +68,37 @@ list[c("object")] or list[c(1,2)]'><!-- mathjax --><script src="https://cdnjs.cl
 
 </dl></div>
 
+    <div class="section level2">
+    <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>   obj1 <span class="op">=</span> <span class="va">mtcars</span>,</span></span>
+<span class="r-in"><span>   obj2 <span class="op">=</span> <span class="va">airmiles</span></span></span>
+<span class="r-in"><span> <span class="op">)</span> <span class="op">-&gt;</span> <span class="va">list1</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span>   <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>   <span class="va">mtcars</span>,</span></span>
+<span class="r-in"><span>   <span class="va">airmiles</span></span></span>
+<span class="r-in"><span> <span class="op">)</span> <span class="op">-&gt;</span> <span class="va">list2</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="list_remove.html">list_remove</a></span><span class="op">(</span><span class="va">list1</span>, <span class="st">"obj1"</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $obj2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Time Series:</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Start = 1937 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> End = 1960 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Frequency = 1 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1]   412   480   683  1052  1385  1418  1634  2178  3362  5948  6109  5981</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [13]  6753  8003 10566 12528 14760 16769 19819 22362 25340 25343 29269 30514</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-in"><span><span class="fu"><a href="list_remove.html">list_remove</a></span><span class="op">(</span><span class="va">list2</span>, <span class="fl">1</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[1]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Time Series:</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Start = 1937 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> End = 1960 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Frequency = 1 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1]   412   480   683  1052  1385  1418  1634  2178  3362  5948  6109  5981</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [13]  6753  8003 10566 12528 14760 16769 19819 22362 25340 25343 29269 30514</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+</code></pre></div>
+    </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside></div>
 

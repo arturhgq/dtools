@@ -70,116 +70,6 @@
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"arturhgq/dtools"</span><span class="op">)</span></span></code></pre></div>
 </div>
-<div class="section level2">
-<h2 id="examples">Examples<a class="anchor" aria-label="anchor" href="#examples"></a>
-</h2>
-<div class="section level3">
-<h3 id="check">Check<a class="anchor" aria-label="anchor" href="#check"></a>
-</h3>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span>  <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/arturhgq/dtools" class="external-link">dtools</a></span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="reference/check_r_pipe.html">check_r_pipe</a></span><span class="op">(</span><span class="cn">T</span><span class="op">)</span></span>
-<span><span class="co">#&gt; ℹ This R version contain the native pipe.</span></span>
-<span><span class="co">#&gt; ℹ R version: 4.2.1</span></span></code></pre></div>
-</div>
-<div class="section level3">
-<h3 id="get">Get<a class="anchor" aria-label="anchor" href="#get"></a>
-</h3>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span>  <span class="fu"><a href="reference/get_index.html">get_index</a></span><span class="op">(</span><span class="va">mtcars</span>, <span class="va">cyl</span><span class="op">)</span></span>
-<span><span class="co">#&gt; [1] 2</span></span>
-<span>  <span class="fu"><a href="reference/get_varname.html">get_varname</a></span><span class="op">(</span><span class="va">mtcars</span>, <span class="fl">2</span><span class="op">)</span></span>
-<span><span class="co">#&gt; [1] "cyl"</span></span></code></pre></div>
-</div>
-</div>
-<div class="section level2">
-<h2 id="fill">Fill<a class="anchor" aria-label="anchor" href="#fill"></a>
-</h2>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span>  <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span></span>
-<span>    var1 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="cn">NA</span>,<span class="fl">2</span>,<span class="fl">3</span>,<span class="cn">NA</span><span class="op">)</span>,</span>
-<span>    var2 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="cn">NA</span>,<span class="cn">NA</span>,<span class="fl">3</span>,<span class="fl">3</span><span class="op">)</span>,</span>
-<span>    var3 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="cn">NA</span>,<span class="fl">1</span>,<span class="fl">3</span>,<span class="fl">3</span><span class="op">)</span>,</span>
-<span>    var4 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">10</span>,<span class="cn">NA</span>, <span class="fl">2</span>,<span class="cn">NA</span><span class="op">)</span>,</span>
-<span>    group <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">2</span><span class="op">)</span></span>
-<span>  <span class="op">)</span> <span class="op">-&gt;</span> <span class="va">data</span></span>
-<span></span>
-<span>  <span class="fu"><a href="reference/fill_by_group.html">fill_by_group</a></span><span class="op">(</span><span class="va">data</span>, <span class="va">group</span>, <span class="va">var1</span>, <span class="va">var3</span><span class="op">)</span></span>
-<span><span class="co">#&gt; # A tibble: 4 × 5</span></span>
-<span><span class="co">#&gt;    var1  var2  var3  var4 group</span></span>
-<span><span class="co">#&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;</span></span>
-<span><span class="co">#&gt; 1     2    NA     1    10     1</span></span>
-<span><span class="co">#&gt; 2     2    NA     1    NA     1</span></span>
-<span><span class="co">#&gt; 3     3     3     3     2     2</span></span>
-<span><span class="co">#&gt; 4     3     3     3    NA     2</span></span></code></pre></div>
-</div>
-<div class="section level2">
-<h2 id="list">List<a class="anchor" aria-label="anchor" href="#list"></a>
-</h2>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span>  <span class="fu">here</span><span class="fu">::</span><span class="fu">here</span><span class="op">(</span><span class="st">"R"</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
-<span>    <span class="fu"><a href="reference/find_files.html">find_files</a></span><span class="op">(</span><span class="st">".R"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; $check.R</span></span>
-<span><span class="co">#&gt; [1] "/home/arturhgq/Desktop/dtools/R/check.R"</span></span>
-<span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; $collapse.R</span></span>
-<span><span class="co">#&gt; [1] "/home/arturhgq/Desktop/dtools/R/collapse.R"</span></span>
-<span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; $`dtools-package.R`</span></span>
-<span><span class="co">#&gt; [1] "/home/arturhgq/Desktop/dtools/R/dtools-package.R"</span></span>
-<span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; $extract.R</span></span>
-<span><span class="co">#&gt; [1] "/home/arturhgq/Desktop/dtools/R/extract.R"</span></span>
-<span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; $fill.R</span></span>
-<span><span class="co">#&gt; [1] "/home/arturhgq/Desktop/dtools/R/fill.R"</span></span>
-<span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; $find.R</span></span>
-<span><span class="co">#&gt; [1] "/home/arturhgq/Desktop/dtools/R/find.R"</span></span>
-<span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; $get.R</span></span>
-<span><span class="co">#&gt; [1] "/home/arturhgq/Desktop/dtools/R/get.R"</span></span>
-<span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; $list.R</span></span>
-<span><span class="co">#&gt; [1] "/home/arturhgq/Desktop/dtools/R/list.R"</span></span>
-<span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; $make.R</span></span>
-<span><span class="co">#&gt; [1] "/home/arturhgq/Desktop/dtools/R/make.R"</span></span>
-<span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; $update.R</span></span>
-<span><span class="co">#&gt; [1] "/home/arturhgq/Desktop/dtools/R/update.R"</span></span>
-<span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; $zzz.R</span></span>
-<span><span class="co">#&gt; [1] "/home/arturhgq/Desktop/dtools/R/zzz.R"</span></span></code></pre></div>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span>  <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
-<span>    obj1 <span class="op">=</span> <span class="va">mtcars</span>,</span>
-<span>    obj2 <span class="op">=</span> <span class="va">airmiles</span></span>
-<span>  <span class="op">)</span> <span class="op">-&gt;</span> <span class="va">list1</span></span>
-<span>  </span>
-<span>    <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
-<span>    <span class="va">mtcars</span>,</span>
-<span>    <span class="va">airmiles</span></span>
-<span>  <span class="op">)</span> <span class="op">-&gt;</span> <span class="va">list2</span></span></code></pre></div>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="reference/list_remove.html">list_remove</a></span><span class="op">(</span><span class="va">list1</span>, <span class="st">"obj1"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; $obj2</span></span>
-<span><span class="co">#&gt; Time Series:</span></span>
-<span><span class="co">#&gt; Start = 1937 </span></span>
-<span><span class="co">#&gt; End = 1960 </span></span>
-<span><span class="co">#&gt; Frequency = 1 </span></span>
-<span><span class="co">#&gt;  [1]   412   480   683  1052  1385  1418  1634  2178  3362  5948  6109  5981</span></span>
-<span><span class="co">#&gt; [13]  6753  8003 10566 12528 14760 16769 19819 22362 25340 25343 29269 30514</span></span></code></pre></div>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="reference/list_remove.html">list_remove</a></span><span class="op">(</span><span class="va">list2</span>, <span class="fl">1</span><span class="op">)</span></span>
-<span><span class="co">#&gt; [[1]]</span></span>
-<span><span class="co">#&gt; Time Series:</span></span>
-<span><span class="co">#&gt; Start = 1937 </span></span>
-<span><span class="co">#&gt; End = 1960 </span></span>
-<span><span class="co">#&gt; Frequency = 1 </span></span>
-<span><span class="co">#&gt;  [1]   412   480   683  1052  1385  1418  1634  2178  3362  5948  6109  5981</span></span>
-<span><span class="co">#&gt; [13]  6753  8003 10566 12528 14760 16769 19819 22362 25340 25343 29269 30514</span></span></code></pre></div>
-</div>
 </div>
   </main><aside class="col-md-3"><div class="links">
 <h2 data-toc-skip>Links</h2>
@@ -210,7 +100,7 @@
 <ul class="list-unstyled">
 <li>
 <a href="https://arturhgq.com" class="external-link">Artur Quirino</a> <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/YOUR-ORCID-ID" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
-<li>Beatriz Silva da Costa <br><small class="roles"> Author, corrector </small> <a href="https://orcid.org/YOUR-ORCID-ID" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<li>Beatriz Silva da Costa <br><small class="roles"> Author, corrector </small> <a href="https://orcid.org/0000-0002-6345-4646" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
 </ul>
 </div>
 

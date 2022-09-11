@@ -66,10 +66,31 @@ This function fills in missing values within groups"><!-- mathjax --><script src
 
 <dt>...</dt>
 <dd><p>variables to be filled.
-If no variables were provided, the function will fill in missing values for all variables.</p></dd>
+If no variables were provided, the function will fill in missing values for
+all variables.</p></dd>
 
 </dl></div>
 
+    <div class="section level2">
+    <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>   var1 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="cn">NA</span>,<span class="fl">2</span>,<span class="fl">3</span>,<span class="cn">NA</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>   var2 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="cn">NA</span>,<span class="cn">NA</span>,<span class="fl">3</span>,<span class="fl">3</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>   var3 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="cn">NA</span>,<span class="fl">1</span>,<span class="fl">3</span>,<span class="fl">3</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>   var4 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">10</span>,<span class="cn">NA</span>, <span class="fl">2</span>,<span class="cn">NA</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>   group <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">2</span><span class="op">)</span></span></span>
+<span class="r-in"><span> <span class="op">)</span> <span class="op">-&gt;</span> <span class="va">data</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span> <span class="fu">fill_by_group</span><span class="op">(</span><span class="va">data</span>, <span class="va">group</span>, <span class="va">var1</span>, <span class="va">var3</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 4 × 5</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    var1  var2  var3  var4 group</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span>     2    <span style="color: #BB0000;">NA</span>     1    10     1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span>     2    <span style="color: #BB0000;">NA</span>     1    <span style="color: #BB0000;">NA</span>     1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span>     3     3     3     2     2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">4</span>     3     3     3    <span style="color: #BB0000;">NA</span>     2</span>
+</code></pre></div>
+    </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside></div>
 
