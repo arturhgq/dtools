@@ -73,7 +73,7 @@ fill_by_group <- function(.data, .group, ...) {
       c(
         "x" = "There is more than one unique value in some groups.",
         "See the list of unique values per group that need manual correction:",
-        "{.message}"
+        "{(.message)}"
       )
     )
   } else {
