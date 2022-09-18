@@ -39,7 +39,6 @@ reference:
 - title: Fill
   desc:
   contents:
-  - fill_by_group
   - fill_merged_cells
 
 - title: List
