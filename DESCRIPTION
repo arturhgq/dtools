@@ -30,6 +30,7 @@ Imports:
     lifecycle,
     pkgdown,
     purrr,
+    quarto,
     rlang,
     stringi,
     stringr,
