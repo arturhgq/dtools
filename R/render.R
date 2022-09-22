@@ -3,10 +3,11 @@
 #'
 #' This function renders quarto documents in pdf, html and docx formats
 #' @param .quarto_doc Quarto document that will be rendered
+#' @param .params A list of named parameters
 #' @export
-render_quarto <- function(.quarto_doc) {
+render_quarto <- function(.quarto_doc, .params) {
   quarto::quarto_render(
     .quarto_doc,
-    output_format = c("pdf", "html", "docx")
+    execute_params = .params,
   )
 }

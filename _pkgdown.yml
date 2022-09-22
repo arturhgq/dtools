@@ -22,6 +22,11 @@ reference:
   - update_package
   - update_data
 
+- title: Render
+  desc:
+  contents:
+  - render_quarto
+
 - title: Check
   desc:
   contents:
@@ -73,3 +78,8 @@ reference:
   - clean_dirnames
   - clean_filenames
   - clean_strings
+
+- title: format
+  desc:
+  contents:
+  - format_digits
