@@ -46,6 +46,9 @@
     <loc>http://dtools.arturhgq.com/reference/find_files.html</loc>
   </url>
   <url>
+    <loc>http://dtools.arturhgq.com/reference/format_digits.html</loc>
+  </url>
+  <url>
     <loc>http://dtools.arturhgq.com/reference/get_colnames.html</loc>
   </url>
   <url>
@@ -68,6 +71,9 @@
   </url>
   <url>
     <loc>http://dtools.arturhgq.com/reference/make_all_character.html</loc>
+  </url>
+  <url>
+    <loc>http://dtools.arturhgq.com/reference/render_quarto.html</loc>
   </url>
   <url>
     <loc>http://dtools.arturhgq.com/reference/update_data.html</loc>
