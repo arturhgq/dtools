@@ -50,6 +50,13 @@ get_colnames <- function(.data) {
 #'
 #' This function gets duplicate rows in a data frame
 #' @param .data data frame
+#' @examples
+#' data.frame(
+#'    var1 = c(1,1,1,1),
+#'    var2 = c(2,2,2,3)
+#' ) -> data
+#'
+#'  get_duplicates(data)
 #' @export
 get_duplicates <- \(.data) {
   .data[duplicated(.data),] |>
