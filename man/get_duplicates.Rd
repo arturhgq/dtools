@@ -14,3 +14,11 @@ get_duplicates(.data)
 
 This function gets duplicate rows in a data frame
 }
+\examples{
+data.frame(
+   var1 = c(1,1,1,1),
+   var2 = c(2,2,2,3)
+) -> data
+
+ get_duplicates(data)
+}

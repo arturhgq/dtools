@@ -4,7 +4,7 @@
 \alias{check_var}
 \title{Check if a variable exists within a data frame}
 \usage{
-check_var(.data, .var)
+check_var(data, var)
 }
 \arguments{
 \item{.data}{data frame}

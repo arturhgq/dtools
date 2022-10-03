@@ -8,14 +8,12 @@
 #' get_index(mtcars, cyl)
 #' @export
 get_index <- function(.data, .var) {
-  deparse(
-    substitute(.var)
-  ) -> .var_string
-  which(colnames(.data) == .var_string) -> .index
+  .var_string = deparse(substitute(.var))
+  .index = which(colnames(.data) == .var_string)
   if (length(.index) > 0) {
     return(.index)
   } else{
-    cli::cli_abort(c("x" = "{(.var_string)} is nonexistent."))
+    NA
   }
 }
 

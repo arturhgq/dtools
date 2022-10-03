@@ -83,3 +83,14 @@ reference:
   desc:
   contents:
   - format_digits
+
+- title: is
+  desc:
+  contents:
+  - not_in
+
+- title: rename
+  desc:
+  contents:
+  - rename_all
+

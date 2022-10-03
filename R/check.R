@@ -41,9 +41,7 @@ check_r_pipe <- function(.rversion = FALSE) {
 #' @param .var variable on which existence will be checked
 #' @export
 #'
-check_var <- function(.data, .var){
-  deparse(
-    substitute(.var)
-  ) -> .var_string
-  any(names(.data) == .var_string)
+check_var <- function(data, var){
+  var_string = deparse(substitute(var))
+  any(names(data) == var_string)
 }

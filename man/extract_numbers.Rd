@@ -4,10 +4,10 @@
 \alias{extract_numbers}
 \title{Extract numerical sequences from strings}
 \usage{
-extract_numbers(.var)
+extract_numbers(x)
 }
 \arguments{
-\item{.var}{variable of type 'character'´}
+\item{x}{a string of type 'character'´}
 }
 \description{
 \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#stable}{\figure{lifecycle-stable.svg}{options: alt='[Stable]'}}}{\strong{[Stable]}}
