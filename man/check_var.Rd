@@ -7,9 +7,9 @@
 check_var(data, var)
 }
 \arguments{
-\item{.data}{data frame}
+\item{data}{data frame}
 
-\item{.var}{variable on which existence will be checked}
+\item{var}{variable on which existence will be checked}
 }
 \description{
 \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#stable}{\figure{lifecycle-stable.svg}{options: alt='[Stable]'}}}{\strong{[Stable]}}

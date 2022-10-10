@@ -37,8 +37,8 @@ check_r_pipe <- function(.rversion = FALSE) {
 #' @description `r lifecycle::badge('stable')`
 #'
 #' This function checks if a variable exists within a data frame
-#' @param .data data frame
-#' @param .var variable on which existence will be checked
+#' @param data data frame
+#' @param var variable on which existence will be checked
 #' @export
 #'
 check_var <- function(data, var){

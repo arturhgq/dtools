@@ -6,9 +6,9 @@
 #' @export
 make_all_character <- \(...) {
 
-  rlang::enquos(...) -> .data_enquos
-  length(.data_enquos) -> .data_length
-  purrr::map(.data_enquos, rlang::as_label) -> .data_names
+  rlang::enquos(...) -> data_enquos
+  length(data_enquos) -> data_length
+  purrr::map(data_enquos, rlang::as_label) -> data_names
 
   rlang::list2(...) |>
     purrr::map(
@@ -21,12 +21,8 @@ make_all_character <- \(...) {
         ) |>
         tibble::as_tibble()
     ) |>
-    purrr::set_names(.data_names) -> .data_list
+    purrr::set_names(data_names) -> data_list
 
-  if (.data_length == 1) {
-    .data_list |>
-      purrr::pluck(1)
-  } else {
-    .data_list
-  }
+  if (data_length == 1) data_list[[1]]
+  else data_list
 }

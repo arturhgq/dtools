@@ -27,6 +27,7 @@ Imports:
     devtools,
     dplyr,
     glue,
+    janitor,
     lifecycle,
     pkgdown,
     purrr,

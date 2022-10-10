@@ -5,11 +5,11 @@
 #' @param list list of data frames
 #' @param ... new_name = "old_name"
 #' @export
-rename_all <- \(list, ...) {
+rename_all <- function(list, ...) {
 
   if (is.data.frame(list)) {
     cli::cli_abort(
-      "'rename_all()' is applied to a list of dataframes. Try list(data1, data2) instead."
+      "'rename_all()' is applied to a list of dataframes. Try `list(data1, data2)` instead."
     )
   }
   index = 1

@@ -2,7 +2,7 @@
 % Please edit documentation in R/is.R
 \name{not_in}
 \alias{not_in}
-\title{Are x elements in y?}
+\title{Are the elements of x contained in y?}
 \usage{
 not_in(x, y)
 }
@@ -14,5 +14,5 @@ not_in(x, y)
 \description{
 \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#stable}{\figure{lifecycle-stable.svg}{options: alt='[Stable]'}}}{\strong{[Stable]}}
 
-This function indicates which elements are not in \R objects
+This function indicates which elements of x are not in y
 }
