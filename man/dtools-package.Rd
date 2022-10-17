@@ -19,10 +19,5 @@ Useful links:
 \author{
 \strong{Maintainer}: Artur Quirino \email{contact@arturhgq.com} (\href{https://orcid.org/0000-0001-8071-6348}{ORCID})
 
-Authors:
-\itemize{
-  \item Beatriz Silva da Costa \email{bea.s.costa@gmail.com} (\href{https://orcid.org/0000-0002-6345-4646}{ORCID}) [corrector]
-}
-
 }
 \keyword{internal}
