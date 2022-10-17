@@ -33,15 +33,29 @@ check_r_pipe <- function(.rversion = FALSE) {
   )
 }
 
-#' @title Check if a variable exists within a data frame
+#' @title Check if a named element exists within a \code{r} object
 #' @description `r lifecycle::badge('stable')`
+#' This function checks if a named element exists within a \code{r} object
+#' @param obj \code{r} object
+#' @param x named element on which existence will be checked
+#' @examples
+#' check_var(mtcars, cyl)
 #'
-#' This function checks if a variable exists within a data frame
-#' @param data data frame
-#' @param var variable on which existence will be checked
+#' data_list = list(dat1 = mtcars, dat2 = airmiles)
+#' check_element(data_list, dat1)
+#' check_element(data_list, dat3)
+#'
 #' @export
 #'
-check_var <- function(data, var){
-  var_string = deparse(substitute(var))
-  any(names(data) == var_string)
+check_var <- function(obj, x){
+  x_string = deparse(substitute(x))
+  any(names(obj) == x_string)
 }
+
+#' @rdname check_var
+#' @export
+check_element <- function(obj, x){
+  x_string = deparse(substitute(x))
+  any(names(obj) == x_string)
+}
+

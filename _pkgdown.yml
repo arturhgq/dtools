@@ -32,6 +32,7 @@ reference:
   contents:
   - check_r_pipe
   - check_var
+  - check_element
 
 - title: Get
   desc:
@@ -94,3 +95,7 @@ reference:
   contents:
   - rename_all
 
+- title: match
+  desc:
+  contents:
+  - match_call

@@ -2,16 +2,11 @@ Package: dtools
 Title: Tools for data analysis
 Version: 0.0.1
 Authors@R: 
-    c(person(given = "Artur",
+      person(given = "Artur",
              family = "Quirino",
              role = c("aut", "cre"),
              email = "contact@arturhgq.com",
-             comment = c(ORCID = "0000-0001-8071-6348")),
-      person(given = "Beatriz",
-             family = "Silva da Costa",
-             role = c("aut", "crr"),
-             email = "bea.s.costa@gmail.com",
-             comment = c(ORCID = "0000-0002-6345-4646")))
+             comment = c(ORCID = "0000-0001-8071-6348"))
 Description: This package provides tools for data analysis.
 License: MIT + file LICENSE
 Suggests: 

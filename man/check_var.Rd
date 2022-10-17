@@ -2,17 +2,27 @@
 % Please edit documentation in R/check.R
 \name{check_var}
 \alias{check_var}
-\title{Check if a variable exists within a data frame}
+\alias{check_element}
+\title{Check if a named element exists within a \code{r} object}
 \usage{
-check_var(data, var)
+check_var(obj, x)
+
+check_element(obj, x)
 }
 \arguments{
-\item{data}{data frame}
+\item{obj}{\code{r} object}
 
-\item{var}{variable on which existence will be checked}
+\item{x}{named element on which existence will be checked}
 }
 \description{
 \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#stable}{\figure{lifecycle-stable.svg}{options: alt='[Stable]'}}}{\strong{[Stable]}}
+This function checks if a named element exists within a \code{r} object
+}
+\examples{
+check_var(mtcars, cyl)
 
-This function checks if a variable exists within a data frame
+data_list = list(dat1 = mtcars, dat2 = airmiles)
+check_element(data_list, dat1)
+check_element(data_list, dat3)
+
 }
