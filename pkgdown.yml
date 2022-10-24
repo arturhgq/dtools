@@ -2,7 +2,7 @@ pandoc: 2.14.2
 pkgdown: 2.0.6
 pkgdown_sha: ~
 articles: {}
-last_built: 2022-10-17T13:42Z
+last_built: 2022-10-24T19:53Z
 urls:
   reference: http://dtools.arturhgq.com/reference
   article: http://dtools.arturhgq.com/articles
