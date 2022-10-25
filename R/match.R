@@ -15,9 +15,8 @@ match_call = function() {
   formal_args = as.list(evalq(formals(), parent.frame(1)))
   if ("..." %in% names(formal_args)) {
     formal_args = within(formal_args, rm("..."))
-  } else {
-    formal_args
   }
+
   for(i in setdiff(names(formal_args), names(call_args)))
     call_args[i] = list( formal_args[[i]] )
 
