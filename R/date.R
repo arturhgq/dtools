@@ -8,7 +8,7 @@
 #' @export
 as_decade = function(year) {
   if (!is.numeric(year)) {
-    cli::cli_abort("{year} must be numeric.")
+    cli::cli_abort("'year' must be numeric.")
   }
   subtract_one = function(x) {
     if (!is.integer(x/10)) x - 1
