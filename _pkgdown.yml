@@ -99,3 +99,8 @@ reference:
   desc:
   contents:
   - match_call
+
+- title: date
+  desc:
+  contents:
+  - as_decade
