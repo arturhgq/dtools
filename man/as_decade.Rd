@@ -4,10 +4,12 @@
 \alias{as_decade}
 \title{Convert years into decades}
 \usage{
-as_decade(year)
+as_decade(year, method = "gregorian")
 }
 \arguments{
 \item{year}{numeric variable of years}
+
+\item{method}{'gregorian' or 'ISO'}
 }
 \description{
 \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#stable}{\figure{lifecycle-stable.svg}{options: alt='[Stable]'}}}{\strong{[Stable]}}
@@ -15,5 +17,6 @@ as_decade(year)
 Returns a vector by grouping a string of years into decades
 }
 \examples{
-as_decade(c(2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011))
+as_decade(c(2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011))
+as_decade(c(2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011), method = "ISO")
 }
