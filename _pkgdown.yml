@@ -104,3 +104,8 @@ reference:
   desc:
   contents:
   - as_decade
+
+- title: split
+  desc:
+  contents:
+  - split_group
