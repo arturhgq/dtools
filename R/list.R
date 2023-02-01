@@ -35,5 +35,4 @@ list_remove <- function(.list, ...){
   } else{
     within(.list, rm(...))
   }
-
 }

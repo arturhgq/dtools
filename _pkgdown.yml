@@ -80,32 +80,37 @@ reference:
   - clean_filenames
   - clean_strings
 
-- title: format
+- title: Format
   desc:
   contents:
   - format_digits
 
-- title: is
+- title: Is
   desc:
   contents:
   - not_in
 
-- title: rename
+- title: Rename
   desc:
   contents:
   - rename_all
 
-- title: match
+- title: Read
+  desc:
+  contents:
+  - read_delim_zip
+
+- title: Match
   desc:
   contents:
   - match_call
 
-- title: date
+- title: Date
   desc:
   contents:
   - as_decade
 
-- title: split
+- title: Split
   desc:
   contents:
   - split_group
