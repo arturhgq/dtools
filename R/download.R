@@ -7,8 +7,7 @@ download.files = function(x) {
   make = function(x) {
     tempfile = tempfile()
     download.file(x, tempfile, method = "curl")
+    return(tempfile)
   }
-
-  files = sapply(x, make, simplify = F)
-  return(files)
+  sapply(x, make, simplify = F)
 }
