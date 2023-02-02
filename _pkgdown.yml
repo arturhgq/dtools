@@ -114,3 +114,8 @@ reference:
   desc:
   contents:
   - split_group
+
+- title: Download
+  desc:
+  contents:
+  - download.files
