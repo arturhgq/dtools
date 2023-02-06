@@ -6,7 +6,11 @@
 download.files = function(x) {
   make = function(x) {
     tempfile = tempfile()
-    download.file(x, tempfile, method = "curl")
+    httr::GET(
+      x,
+      httr::write_disk(path = tempfile, overwrite = TRUE),
+      httr::progress()
+    )
     return(tempfile)
   }
   sapply(x, make, simplify = F)

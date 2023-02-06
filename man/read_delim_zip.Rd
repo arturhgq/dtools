@@ -4,7 +4,7 @@
 \alias{read_delim_zip}
 \title{Read delimited files stored in a zip file}
 \usage{
-read_delim_zip(x, encoding = "latin1", delim = NULL, pattern = "")
+read_delim_zip(x, encoding = "latin1", delim = ";", pattern = "", ...)
 }
 \arguments{
 \item{x}{zip file.}
@@ -12,6 +12,8 @@ read_delim_zip(x, encoding = "latin1", delim = NULL, pattern = "")
 \item{delim}{See \code{\link[vroom:vroom]{vroom::vroom()}}}
 
 \item{pattern}{A regular expression to be matched in the given compressed files character vector.}
+
+\item{...}{\code{\link[vroom:vroom]{vroom::vroom()}} args.}
 
 \item{enconding}{Set the encoding of the delimited files.}
 }
