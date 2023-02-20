@@ -13,5 +13,6 @@ download.files = function(x) {
     )
     return(tempfile)
   }
-  sapply(x, make, simplify = F)
+  files = sapply(x, make, simplify = F)
+  return(files)
 }
