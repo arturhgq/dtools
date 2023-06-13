@@ -46,27 +46,54 @@ clean_filenames <- \(.path) {
 #'
 #' This function cleans up string vectors, removing accents, whitespace, and
 #'  transforming characters from uppercase to lowercase.
-#' @param .var string vector
+#' @param x string vector
+#' @param .toupper keeping uppercase characters
+#' @param .rm_special_char remove special characters 
 #' @param .rm_accent remove accents
 #' @param .rm_spaces remove whitespace
 #' @export
-clean_strings <- \(
-  .var,
+clean_string = function( 
+  x,
+  .toupper = FALSE,
+  .keep_alnum = TRUE,
   .rm_accent = TRUE,
   .rm_spaces = TRUE) {
+  
+  if (.rm_accent) x_ascii = stringi::stri_trans_general(x, "Latin-ASCII")
+  else x_ascii = x
+  
+  if(.rm_special_char) x_alnum = gsub("[^A-Za-z0-9 ]", "", x_ascii)
+  else x_alnum = x_ascii
 
-  if (.rm_accent) {
-    stringi::stri_trans_general({{.var}}, "Latin-ASCII") -> .var_
-  } else {
-    .var -> .var_
-  }
+  if (.toupper) x_space = toupper(gsub("\\s+"," ", trimws(x_alnum))) 
+  else x_space = tolower(gsub("\\s+"," ", trimws(x_alnum))) 
+  
+  if (.rm_spaces) rm_underscore = gsub(" ", "_", x_space)
+  else rm_underscore = x_space
+  
+  return(rm_underscore)
+}
 
-  stringr::str_squish(.var_) |>
-    tolower() -> string
+#' @rdname clean_string
+#' @export
+clean_strings = function( 
+  x,
+  .toupper = FALSE,
+  .keep_alnum = TRUE,
+  .rm_accent = TRUE,
+  .rm_spaces = TRUE) {
+  
+  if (.rm_accent) x_ascii = stringi::stri_trans_general(x, "Latin-ASCII")
+  else x_ascii = x
+  
+  if(.rm_special_char) x_alnum = gsub("[^A-Za-z0-9 ]", "", x_ascii)
+  else x_alnum = x_ascii
 
-  if (.rm_spaces) {
-    gsub(" ", "_", string)
-  } else {
-    return(string)
-  }
+  if (.toupper) x_space = toupper(gsub("\\s+"," ", trimws(x_alnum))) 
+  else x_space = tolower(gsub("\\s+"," ", trimws(x_alnum))) 
+  
+  if (.rm_spaces) rm_underscore = gsub(" ", "_", x_space)
+  else rm_underscore = x_space
+  
+  return(rm_underscore)
 }
