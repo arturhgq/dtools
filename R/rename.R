@@ -15,7 +15,7 @@ rename_all <- function(list, ...) {
   index = 1
   ilist = 1
   results = list()
-  dots_args = list(...)
+  dots_args = c(...)
   for (i in list) {
     for(j in 1:length(dots_args)){
       check_var = NULL
