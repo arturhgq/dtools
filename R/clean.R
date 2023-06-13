@@ -55,7 +55,7 @@ clean_filenames <- \(.path) {
 clean_string = function( 
   x,
   .toupper = FALSE,
-  .keep_alnum = TRUE,
+  .rm_special_char = TRUE,
   .rm_accent = TRUE,
   .rm_spaces = TRUE) {
   
