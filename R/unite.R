@@ -1,6 +1,6 @@
 #' @title Unite multiple columns into one keeping only unique values
 #' @description This function unites multiple columns into one keeping only unique values. 
-#' unite_unique is heavily based on tidyr::unite().  
+#' `unite_unique()` is heavily based on tidyr::unite().  
 #' @param data A data frame
 #' @param col Quoted name of the new column
 #' @param ... Quoted columns to unite
