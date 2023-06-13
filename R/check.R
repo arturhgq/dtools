@@ -33,29 +33,66 @@ check_r_pipe <- function(.rversion = FALSE) {
   )
 }
 
-#' @title Check if a named element exists within a \code{r} object
+#' @title Check if a quoted or unquoted element exists within a \code{r} object
 #' @description `r lifecycle::badge('stable')`
-#' This function checks if a named element exists within a \code{r} object
+#' This function checks if a quoted or unquoted element exists within a \code{r} object
 #' @param obj \code{r} object
-#' @param x named element on which existence will be checked
+#' @param x a quoted or unquoted element on which existence will be checked
 #' @examples
 #' check_var(mtcars, cyl)
 #'
 #' data_list = list(dat1 = mtcars, dat2 = airmiles)
-#' check_element(data_list, dat1)
+#' check_var(data_list, dat1)
 #' check_element(data_list, dat3)
 #'
 #' @export
 #'
 check_var <- function(obj, x){
-  x_string = deparse(substitute(x))
+  x_substitute = substitute(x)
+  if (is.symbol(x_substitute)) x_string = deparse(x_substitute)
+  else x_string = x
   any(names(obj) == x_string)
 }
 
 #' @rdname check_var
 #' @export
 check_element <- function(obj, x){
-  x_string = deparse(substitute(x))
+  x_substitute = substitute(x)
+  if (is.symbol(x_substitute)) x_string = deparse(x_substitute)
+  else x_string = x
   any(names(obj) == x_string)
 }
 
+#' @title Check if a vector of quoted elements exists within a \code{r} object
+#' @description `r lifecycle::badge('stable')`
+#' This function checks if a vector of quoted elements exists within a \code{r} object
+#' @param obj \code{r} object
+#' @param x a vector fo quoted elements on which existence will be checked
+#' @examples
+#' check_var(mtcars, cyl)
+#'
+#' data_list = list(dat1 = mtcars, dat2 = airmiles)
+#' check_vars(data_list, c("dat12", "dat1"))
+#' check_elements(data_list, c("dat12", "dat1"))
+#'
+#' @export
+#'
+check_vars = function(obj, x) {
+  mapply(
+    check_var, 
+    x = x,
+    MoreArgs = list(obj = obj),
+    SIMPLIFY = FALSE
+  )
+}
+
+#' @rdname check_vars
+#' @export
+check_elements = function(obj, x) {
+  mapply(
+    check_var, 
+    x = x,
+    MoreArgs = list(obj = obj),
+    SIMPLIFY = FALSE
+  )
+}
