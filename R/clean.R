@@ -62,8 +62,12 @@ clean_string = function(
   if (.rm_accent) x_ascii = stringi::stri_trans_general(x, "Latin-ASCII")
   else x_ascii = x
   
-  if(.rm_special_char) x_alnum = gsub("[^A-Za-z0-9 ]", "", x_ascii)
-  else x_alnum = x_ascii
+  if(.rm_special_char) {
+    x_punct_replaced = gsub("[[:punct:]]+", " ", x_ascii)
+    x_alnum = gsub("[^A-Za-z0-9 ]", "", x_punct_replaced)
+  } else {
+    x_alnum = x_ascii
+  }
 
   if (.toupper) x_space = toupper(gsub("\\s+"," ", trimws(x_alnum))) 
   else x_space = tolower(gsub("\\s+"," ", trimws(x_alnum))) 
@@ -86,8 +90,12 @@ clean_strings = function(
   if (.rm_accent) x_ascii = stringi::stri_trans_general(x, "Latin-ASCII")
   else x_ascii = x
   
-  if(.rm_special_char) x_alnum = gsub("[^A-Za-z0-9 ]", "", x_ascii)
-  else x_alnum = x_ascii
+  if(.rm_special_char) {
+    x_punct_replaced = gsub("[[:punct:]]+", " ", x_ascii)
+    x_alnum = gsub("[^A-Za-z0-9 ]", "", x_punct_replaced)
+  } else {
+    x_alnum = x_ascii
+  }
 
   if (.toupper) x_space = toupper(gsub("\\s+"," ", trimws(x_alnum))) 
   else x_space = tolower(gsub("\\s+"," ", trimws(x_alnum))) 
