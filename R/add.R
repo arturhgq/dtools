@@ -11,6 +11,6 @@ add_digits = function(x, digit = 0, seq_length) {
   x_split = stringr::str_split(x_clean, "")
   x_length = purrr::map_dbl(x_split, length)
   x_length_remainder = seq_length - x_length
-  n_digits = stringr::str_dup("0", x_length_remainder)
+  n_digits = stringr::str_dup(digit, x_length_remainder)
   paste0(n_digits, x_clean)
 }
