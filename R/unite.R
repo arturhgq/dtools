@@ -22,9 +22,9 @@ unite_unique = function(data, col, ..., sep = ", ", remove = FALSE, na.rm = TRUE
   values[values == ""] <- NA_character_
   
   data[[col]] <- values
-  varnames = names(data)
-
-  if (col %in% c(...)) varnames = varnames[- grep(col, x = varnames)] 
-  if (remove) data[,!varnames %in% c(...)]
+  varnames = c(...)
+  
+  if (col %in% varnames) varnames = varnames[- grep(col, x = varnames)]
+  if (remove) data[,!names(data) %in% varnames]
   else return(data)
 }
