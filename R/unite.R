@@ -13,18 +13,18 @@ unite_unique = function(data, col, ..., sep = ", ", remove = FALSE, na.rm = TRUE
     cli::cli_abort("'col' arg and tree-dots must be specified.")
   }
   values = lapply(
-    as.data.frame(t(data[, c(...)])), 
+    as.data.frame(t(data[, c(...)])),
     function(x) unique(as.vector(x))
   )
-  if (na.rm) values = lapply(values, na.omit)    
+  if (na.rm) values = lapply(values, na.omit)
   values = sapply(values, function(x) paste(x, collapse = sep), USE.NAMES = FALSE)
-  
+
   values[values == ""] <- NA_character_
-  
+
   data[[col]] <- values
   varnames = c(...)
-  
-  if (col %in% varnames) varnames = varnames[- grep(col, x = varnames)]
+
+  if (col %in% varnames) varnames = varnames[!varnames %in% col]
   if (remove) data[,!names(data) %in% varnames]
   else return(data)
 }
